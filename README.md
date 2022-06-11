@@ -18,7 +18,7 @@ Mi objetivo con este curso es llevarte desde lo básico hasta temas avanzado de 
 4. Gran variedad de operadores:
 
 * map
-*switchMap
+* switchMap
 * tap
 * filter
 * sample
