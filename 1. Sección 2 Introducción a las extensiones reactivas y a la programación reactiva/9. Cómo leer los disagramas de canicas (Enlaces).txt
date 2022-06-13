@@ -1,0 +1,9 @@
+========================================================================
+                        ENLACES DOCUMENTACIÓN
+========================================================================
+
+* RXJS - Firebase docs:   
+         https://rxjs-dev.firebaseapp.com/api
+
+* ReactiveX - Official Docs
+	 https://reactivex.io/documentation/observable.html
