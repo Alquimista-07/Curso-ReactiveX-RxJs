@@ -36,3 +36,49 @@ const timer$ = timer( 2000 );
 console.log('Inicio timer');
 timer$.subscribe( observerTimer );
 console.log('Fin timer');
+
+
+//========================================================
+// 27. timer - Configuraciones especiales
+//========================================================
+
+const observerTimer2 = {
+    next: val => console.log('next timer:', val),
+    complete: () => console.log('Completado timer') 
+};
+
+//--------------------------------------------------------------------------------------------------------------
+// NOTA: Acá en este caso indica se va a ejecutar inmediatamente, pero no es instantanemente
+//       del todo ya que se va a ejecutar es tan pronto el stock de callbacks y JavaScript lo 
+//       permita.
+/*
+const timer2$ = timer( 0 );
+*/
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// NOTA: Ahora que pasa si mandamos un segundo parámetro. Y esto es porque se habal de que el 
+//       timer y el interval son parecidos ya que aca espera un tiempo determinado (primer parámetro)
+//       y posteriormente empieza a emitir valores cada determinado tiempo (segundo parámetro).
+//       En pocas palabras se crea un interval que inicia en una determinada cantidad de tiempo
+/*
+const timer2$ = timer( 5000, 1000 );
+*/
+//--------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------
+// NOTA: Ahora por ejemplo cuando queremos programar una notificación local no una push notification sino una normal
+//       nosotros podemos especificar en que momento, en que fecha se dispara dicha notificación, y practicamente con
+//       el timer yo puedo hacer eso de la siguiente manera:
+
+const hoyen5 = new Date();  // Ahora
+
+//Quiero sumarle tanto tiempo
+hoyen5.setSeconds(hoyen5.getSeconds() + 5);
+
+const timer2$ = timer( hoyen5 );
+//--------------------------------------------------------------------------------------------------------------
+
+console.log('Inicio timer');
+timer2$.subscribe( observerTimer2 );
+console.log('Fin timer');
