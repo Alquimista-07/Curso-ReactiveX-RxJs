@@ -1,6 +1,6 @@
 # ReactiveX---RxJs
 
-Repositorio git creado para almacenar los ejercicios realizados para el curso de Udemy ReactiveX - RxJs: De cero hasta los detalles.
+Repositorio git creado para almacenar los ejercicios realizados para el curso de [Udemy](https://www.udemy.com/course/rxjs-de-cero-hasta-los-detalles/) ReactiveX - RxJs: De cero hasta los detalles.
 
 Instructor: Fernando Herrera.
 
